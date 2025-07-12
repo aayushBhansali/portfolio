@@ -1,12 +1,224 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-primary-foreground">
+                AB
+              </div>
+              <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Aayush Bhansali
+              </h1>
+              <h2 className="text-2xl text-muted-foreground mb-6">Lead Software Engineer</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                I'm a software engineer that specializes in effective usage of different technologies and programming languages to quickly solve problems. I believe - the problem needs to be solved - no matter the programming language / framework being used making me adaptable to almost any technology.
+              </p>
+            </div>
+            
+            <div className="flex gap-4 justify-center mb-8">
+              <Button variant="default" size="lg" className="gap-2">
+                <Mail className="w-4 h-4" />
+                Contact Me
+              </Button>
+              <Button variant="outline" size="lg" className="gap-2">
+                <Github className="w-4 h-4" />
+                GitHub
+              </Button>
+              <Button variant="outline" size="lg" className="gap-2">
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-center mb-12">Technical Expertise</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Card className="text-center">
+                <CardHeader>
+                  <Code className="w-8 h-8 mx-auto mb-2 text-primary" />
+                  <CardTitle className="text-lg">Languages</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <Badge variant="secondary">JavaScript</Badge>
+                    <Badge variant="secondary">TypeScript</Badge>
+                    <Badge variant="secondary">Python</Badge>
+                    <Badge variant="secondary">Java</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <Globe className="w-8 h-8 mx-auto mb-2 text-primary" />
+                  <CardTitle className="text-lg">Frontend</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <Badge variant="secondary">React</Badge>
+                    <Badge variant="secondary">Vue.js</Badge>
+                    <Badge variant="secondary">Angular</Badge>
+                    <Badge variant="secondary">Next.js</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <Database className="w-8 h-8 mx-auto mb-2 text-primary" />
+                  <CardTitle className="text-lg">Backend</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <Badge variant="secondary">Node.js</Badge>
+                    <Badge variant="secondary">Express</Badge>
+                    <Badge variant="secondary">Django</Badge>
+                    <Badge variant="secondary">PostgreSQL</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <Smartphone className="w-8 h-8 mx-auto mb-2 text-primary" />
+                  <CardTitle className="text-lg">Tools</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <Badge variant="secondary">Docker</Badge>
+                    <Badge variant="secondary">AWS</Badge>
+                    <Badge variant="secondary">Git</Badge>
+                    <Badge variant="secondary">Jenkins</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-3xl font-bold text-center mb-12">Featured Projects</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-full h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-4 flex items-center justify-center">
+                    <Code className="w-12 h-12 text-muted-foreground" />
+                  </div>
+                  <CardTitle>Project Title 1</CardTitle>
+                  <CardDescription>Brief description of your first project</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline">React</Badge>
+                    <Badge variant="outline">TypeScript</Badge>
+                    <Badge variant="outline">Node.js</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <Github className="w-3 h-3" />
+                      Code
+                    </Button>
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <ExternalLink className="w-3 h-3" />
+                      Live Demo
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-full h-48 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg mb-4 flex items-center justify-center">
+                    <Database className="w-12 h-12 text-muted-foreground" />
+                  </div>
+                  <CardTitle>Project Title 2</CardTitle>
+                  <CardDescription>Brief description of your second project</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline">Python</Badge>
+                    <Badge variant="outline">Django</Badge>
+                    <Badge variant="outline">PostgreSQL</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <Github className="w-3 h-3" />
+                      Code
+                    </Button>
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <ExternalLink className="w-3 h-3" />
+                      Live Demo
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-full h-48 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
+                    <Smartphone className="w-12 h-12 text-muted-foreground" />
+                  </div>
+                  <CardTitle>Project Title 3</CardTitle>
+                  <CardDescription>Brief description of your third project</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge variant="outline">React Native</Badge>
+                    <Badge variant="outline">Firebase</Badge>
+                    <Badge variant="outline">Redux</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <Github className="w-3 h-3" />
+                      Code
+                    </Button>
+                    <Button variant="outline" size="sm" className="gap-1">
+                      <ExternalLink className="w-3 h-3" />
+                      Live Demo
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h3 className="text-3xl font-bold mb-6">Let's Work Together</h3>
+            <p className="text-muted-foreground mb-8 text-lg">
+              Ready to bring your next project to life? Let's discuss how I can help solve your technical challenges.
+            </p>
+            <Button size="lg" className="gap-2">
+              <Mail className="w-4 h-4" />
+              Get In Touch
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
