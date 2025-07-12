@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone, Download, CheckCircle, Briefcase } from "lucide-react";
 
 const Index = () => {
   return (
@@ -11,8 +11,14 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-primary-foreground">
-                AB
+              <div className="relative">
+                <Badge className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white border-green-500 hover:bg-green-600 gap-1">
+                  <CheckCircle className="w-3 h-3" />
+                  Available for Hire
+                </Badge>
+                <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-primary-foreground">
+                  AB
+                </div>
               </div>
               <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Aayush Bhansali
@@ -23,10 +29,14 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex gap-4 justify-center mb-8">
+            <div className="flex gap-4 justify-center mb-8 flex-wrap">
               <Button variant="default" size="lg" className="gap-2">
-                <Mail className="w-4 h-4" />
-                Contact Me
+                <Briefcase className="w-4 h-4" />
+                Hire Me
+              </Button>
+              <Button variant="outline" size="lg" className="gap-2">
+                <Download className="w-4 h-4" />
+                Download Resume
               </Button>
               <Button variant="outline" size="lg" className="gap-2">
                 <Github className="w-4 h-4" />
@@ -204,18 +214,57 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-muted/30">
+      {/* Hiring Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-6">Let's Work Together</h3>
-            <p className="text-muted-foreground mb-8 text-lg">
-              Ready to bring your next project to life? Let's discuss how I can help solve your technical challenges.
-            </p>
-            <Button size="lg" className="gap-2">
-              <Mail className="w-4 h-4" />
-              Get In Touch
-            </Button>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <Badge className="mb-4 bg-green-500 text-white border-green-500 hover:bg-green-600 gap-1">
+                <CheckCircle className="w-3 h-3" />
+                Open to Opportunities
+              </Badge>
+              <h3 className="text-3xl font-bold mb-6">Ready for Your Next Project</h3>
+              <p className="text-muted-foreground mb-8 text-lg max-w-2xl mx-auto">
+                I'm actively seeking new opportunities where I can apply my problem-solving skills and adaptability to help your team succeed. Whether it's a full-time role, contract work, or consulting, I'm ready to make an impact.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Briefcase className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <h4 className="font-semibold mb-2">Full-time Roles</h4>
+                  <p className="text-sm text-muted-foreground">Looking for leadership and senior engineering positions</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Code className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <h4 className="font-semibold mb-2">Contract Work</h4>
+                  <p className="text-sm text-muted-foreground">Available for project-based development work</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="text-center">
+                <CardContent className="pt-6">
+                  <Mail className="w-8 h-8 mx-auto mb-3 text-primary" />
+                  <h4 className="font-semibold mb-2">Consulting</h4>
+                  <p className="text-sm text-muted-foreground">Technical guidance and architecture consulting</p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button size="lg" className="gap-2">
+                <Mail className="w-4 h-4" />
+                Contact for Jobs
+              </Button>
+              <Button variant="outline" size="lg" className="gap-2">
+                <Download className="w-4 h-4" />
+                View Resume
+              </Button>
+            </div>
           </div>
         </div>
       </section>
