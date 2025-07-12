@@ -11,19 +11,13 @@ const Index = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <div className="relative">
-                <Badge className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white border-green-500 hover:bg-green-600 gap-1">
-                  <CheckCircle className="w-3 h-3" />
-                  Available for Hire
-                </Badge>
-                <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-primary-foreground">
-                  AB
-                </div>
+              <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-4xl font-bold text-primary-foreground shadow-xl">
+                AB
               </div>
               <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Aayush Bhansali
               </h1>
-              <h2 className="text-2xl text-muted-foreground mb-6">Lead Software Engineer</h2>
+              <h2 className="text-2xl text-muted-foreground mb-6 font-medium">Lead Software Engineer</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 I'm a software engineer that specializes in effective usage of different technologies and programming languages to quickly solve problems. I believe - the problem needs to be solved - no matter the programming language / framework being used making me adaptable to almost any technology.
               </p>
@@ -58,62 +52,70 @@ const Index = () => {
             <h3 className="text-3xl font-bold text-center mb-12">Technical Expertise</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="text-center">
-                <CardHeader>
-                  <Code className="w-8 h-8 mx-auto mb-2 text-primary" />
+              <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/20">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center">
+                    <Code className="w-8 h-8 text-primary" />
+                  </div>
                   <CardTitle className="text-lg">Languages</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="secondary">JavaScript</Badge>
-                    <Badge variant="secondary">TypeScript</Badge>
-                    <Badge variant="secondary">Python</Badge>
-                    <Badge variant="secondary">Java</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">JavaScript</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">TypeScript</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Python</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Java</Badge>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
-                <CardHeader>
-                  <Globe className="w-8 h-8 mx-auto mb-2 text-primary" />
+              <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/20">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-secondary/10 to-secondary/20 rounded-xl flex items-center justify-center">
+                    <Globe className="w-8 h-8 text-secondary-foreground" />
+                  </div>
                   <CardTitle className="text-lg">Frontend</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="secondary">React</Badge>
-                    <Badge variant="secondary">Vue.js</Badge>
-                    <Badge variant="secondary">Angular</Badge>
-                    <Badge variant="secondary">Next.js</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">React</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Vue.js</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Angular</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Next.js</Badge>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
-                <CardHeader>
-                  <Database className="w-8 h-8 mx-auto mb-2 text-primary" />
+              <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/20">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-accent/10 to-accent/20 rounded-xl flex items-center justify-center">
+                    <Database className="w-8 h-8 text-accent-foreground" />
+                  </div>
                   <CardTitle className="text-lg">Backend</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="secondary">Node.js</Badge>
-                    <Badge variant="secondary">Express</Badge>
-                    <Badge variant="secondary">Django</Badge>
-                    <Badge variant="secondary">PostgreSQL</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Node.js</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Express</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Django</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">PostgreSQL</Badge>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
-                <CardHeader>
-                  <Smartphone className="w-8 h-8 mx-auto mb-2 text-primary" />
+              <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/20">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-primary/10 to-secondary/20 rounded-xl flex items-center justify-center">
+                    <Smartphone className="w-8 h-8 text-primary" />
+                  </div>
                   <CardTitle className="text-lg">Tools</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="secondary">Docker</Badge>
-                    <Badge variant="secondary">AWS</Badge>
-                    <Badge variant="secondary">Git</Badge>
-                    <Badge variant="secondary">Jenkins</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Docker</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">AWS</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Git</Badge>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">Jenkins</Badge>
                   </div>
                 </CardContent>
               </Card>
